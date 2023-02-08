@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {AiOutlineShoppingCart} from  "react-icons/ai";
 export default function Navbar() {
   return (
-    <div className=''>{/*display hidden*/}
+    <div className=''>
       
 <nav className="bg-white border-gray-200 dark:bg-gray-900">
     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
@@ -11,7 +11,7 @@ export default function Navbar() {
              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Ecommerce</span>
         </Link>
         <div className="flex items-center">
-            <Link to="/#" className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Login</Link>
+            <Link to="/#" className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Logout</Link>
         </div>
     </div>
 </nav>

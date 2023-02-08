@@ -25,7 +25,7 @@ export default function Mens_clothing() {
         {mensclothing.map((menclothing)=>{
           return(
           <div key={menclothing.id} className='border border-spacing-2 flex flex-col p-2 rounded-xl'>
-                    <img className='h-80 object-contain' src={menclothing.image}/>
+                    <img className='h-80 object-contain' src={menclothing.image} alt='menclothing'/>
                     <h1 className='mb-1 text-xl'>{delimiter(menclothing.title,30)}</h1>
                     <p className='text-gray-500'>{delimiter(menclothing.description,53)}</p>
                     <div className='w-full flex justify-between mt-5'>

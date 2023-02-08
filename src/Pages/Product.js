@@ -10,7 +10,7 @@ export default function Product() {
      <MainLayout>
         <div className='p-5'>
         <div>
-            <img className='h-80 object-contain mb-3' src={data.image}/>
+            <img className='h-80 object-contain mb-3' src={data.image} alt='img'/>
         </div>
         <div>
             <h1 className='text-xl'>{data.title}</h1>

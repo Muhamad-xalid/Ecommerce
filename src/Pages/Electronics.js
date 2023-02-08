@@ -25,7 +25,7 @@ export default function Electronics() {
         {electronicsdata.map((electronicdata)=>{
           return(
           <div key={electronicdata.id} className='border border-spacing-2 flex flex-col p-2 rounded-xl'>
-                    <img className='h-80 object-contain' src={electronicdata.image}/>
+                    <img className='h-80 object-contain' src={electronicdata.image} alt='electronicdata'/>
                     <h1 className='mb-1 text-xl'>{delimiter(electronicdata.title,30)}</h1>
                     <p className='text-gray-500'>{delimiter(electronicdata.description,53)}</p>
                     <div className='w-full flex justify-between mt-5'>
