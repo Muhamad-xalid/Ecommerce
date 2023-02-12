@@ -16,7 +16,7 @@ export default function Navbar() {
     </div>
 </nav>
 <nav className="bg-gray-50 dark:bg-gray-700">
-    <div className="max-w-screen-xl px-4 py-3 mx-auto md:px-6">
+    <div className="max-w-screen-xl px-4 py-4 mx-auto md:px-6">
         <div className="flex justify-between items-center">
             <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                 <li>
@@ -28,11 +28,10 @@ export default function Navbar() {
                 <li>
                     <Link to="/Contact" className="text-gray-900 dark:text-white hover:underline">Contact</Link>
                 </li>
-                {/* <li>
-                    <Link to="/#" className="text-gray-900 dark:text-white hover:underline">Features</Link>
-                </li> */}
             </ul>
-            <button className='text-gray-900 dark:text-white hover:underline'><AiOutlineShoppingCart/></button>
+            <Link to='/Cart' className='text-gray-900 dark:text-white hover:underline text-2xl relative'><AiOutlineShoppingCart/>
+            <span className='bg-white text-red-700 text-center text-xs font-bold w-4 h-4 rounded-full absolute left-3 bottom-4'>0</span>
+            </Link>
         </div>
     </div>
 </nav>

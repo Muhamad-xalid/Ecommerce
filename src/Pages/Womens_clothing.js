@@ -24,7 +24,7 @@ export default function Womens_clothing() {
          {womensclothing.map((womenclothing)=>{
            return(
            <div key={womenclothing.id} className='border border-spacing-2 flex flex-col p-2 rounded-xl'>
-                     <img className='h-80 object-contain' src={womenclothing.image} alt='womenclothing'/>
+                     <img className='h-80 object-contain' src={womenclothing.image} alt='womenclothing img'/>
                      <h1 className='mb-1 text-xl'>{delimiter(womenclothing.title,30)}</h1>
                      <p className='text-gray-500'>{delimiter(womenclothing.description,53)}</p>
                      <div className='w-full flex justify-between mt-5'>

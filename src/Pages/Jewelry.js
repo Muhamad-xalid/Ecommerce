@@ -25,7 +25,7 @@ export default function Jewelry() {
         {jewelrysdata.map((jewelrydata)=>{
           return(
           <div key={jewelrydata.id} className='border border-spacing-2 flex flex-col p-2 rounded-xl'>
-                    <img className='h-80 object-contain' src={jewelrydata.image} alt='jewelrydata'/>
+                    <img className='h-80 object-contain' src={jewelrydata.image} alt='jewelry img'/>
                     <h1 className='mb-1 text-xl'>{delimiter(jewelrydata.title,30)}</h1>
                     <p className='text-gray-500'>{delimiter(jewelrydata.description,53)}</p>
                     <div className='w-full flex justify-between mt-5'>

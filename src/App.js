@@ -10,6 +10,7 @@ import MensClothing from './Pages/Mens_clothing'
 import WomensClothing from './Pages/Womens_clothing'
 import Product from './Pages/Product';
 import Login from './Pages/Login';
+import Cart from './Pages/Cart'
 function App() {
   
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path="/mensclothing" element={<MensClothing />} />
         <Route path="/womensclothing" element={<WomensClothing />} />
         <Route path="/Product" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<p> 404 page not found</p>} />
 
       </Routes>
    </div>

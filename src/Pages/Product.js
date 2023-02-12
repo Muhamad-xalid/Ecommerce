@@ -1,14 +1,36 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Rating from 'react-rating'
 import MainLayout from "../Layouts/MainLayout"
+import Modal from 'react-modal';
+import {BsCartPlus} from 'react-icons/bs'
 export default function Product() {
-
     const location = useLocation()
     const data = location.state
-   return (
+
+    const [modalIsOpen, setIsOpen] = useState(false)
+
+    function openModal() {
+      setIsOpen(true);
+    }
+  
+    function closeModal() {
+      setIsOpen(false);
+    }
+    console.log(data);
+return (
      <MainLayout>
         <div className='p-5'>
+            <button onClick={openModal}>open modal</button>
+                    <Modal
+                    isOpen={modalIsOpen}
+                    ariaHideApp={false}
+                    // onAfterOpen={afterOpenModal}
+                    onRequestClose={closeModal}
+                    // style={customStyles}
+                    contentLabel="Example Modal">
+                        <p>hiiiiii</p><button onClick={closeModal}>open modal</button>
+                </Modal>
         <div>
             <img className='h-80 object-contain mb-3' src={data.image} alt='img'/>
         </div>
@@ -29,7 +51,7 @@ export default function Product() {
             <p className='my-2 text-gray-500'>{data.description}</p>
             <div className='flex mt-10'>
                 <p className='text-xl mr-10 text-gray-900 font-bold'>{data.price}$</p>
-                <button className='px-3 py-1 bg-gray-900 text-white rounded-lg'>Add to cart</button>
+                <Link to='/cart' state={data}  className='px-3 py-1 bg-gray-900 text-white rounded-lg flex items-center justify-between w-36'>Add to cart <BsCartPlus/></Link>
             </div>
         </div>
         </div>
