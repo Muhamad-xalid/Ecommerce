@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Rating from 'react-rating'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import Modal from 'react-modal';
 import { delimiter } from '../Utils/Delimiter';
 export default function Product(props) {
     const [modalIsOpen, setIsOpen] = useState(false)
-    const [data,setdata] = useState(props.data)
+    const [data,setdata] = useState()
+    useEffect(()=>{
+      setdata(props.data)
+    },[props.data])
 
     function openModal() {
       setIsOpen(true);
