@@ -4,7 +4,8 @@ export default function Home() {
 
   return (
     <MainLayout >
-     <div className='flex flex-col items-center'>
+    <div className=" flex flex-col gap-y-36 ">
+    <div className='flex flex-col items-center'>
      <h1 className='my-5 text-2xl text-gray-900 font-serif'>Our Products</h1>
       <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
         <Link to='/electronics' className="bg-gray-900 text-white px-5 py-5 m-3 text-center rounded-lg">
@@ -25,6 +26,10 @@ export default function Home() {
         </Link>
       </ul>
      </div>
+     <div className="bg-gray-800 text-white py-2 text-center">
+       <p>© Copyright Ecommerce 2023</p>
+     </div>
+    </div>
     </MainLayout>
   )
 }

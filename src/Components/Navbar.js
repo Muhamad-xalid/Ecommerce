@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import {AiOutlineShoppingCart} from  "react-icons/ai";
 export default function Navbar() {
   return (
     <div className=''>
@@ -29,9 +28,6 @@ export default function Navbar() {
                     <Link to="/Contact" className="text-gray-900 dark:text-white hover:underline">Contact</Link>
                 </li>
             </ul>
-            <Link to='/Cart' className='text-gray-900 dark:text-white hover:underline text-2xl relative'><AiOutlineShoppingCart/>
-            <span className='bg-white text-red-700 text-center text-xs font-bold w-4 h-4 rounded-full absolute left-3 bottom-4'>0</span>
-            </Link>
         </div>
     </div>
 </nav>

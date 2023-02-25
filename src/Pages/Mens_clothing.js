@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { delimiter } from '../Utils/Delimiter';
 import MainLayout from "../Layouts/MainLayout"
-import { Link } from 'react-router-dom';
+import Product from './Product';
 export default function Mens_clothing() {
   
   const [mensclothing,setmensclothing]=useState([])
@@ -24,15 +23,7 @@ export default function Mens_clothing() {
       <div className='px-7 my-10 grid gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center' >
         {mensclothing.map((menclothing)=>{
           return(
-          <div key={menclothing.id} className='border border-spacing-2 flex flex-col p-2 rounded-xl'>
-                    <img className='h-80 object-contain' src={menclothing.image} alt='menclothing img'/>
-                    <h1 className='mb-1 text-xl'>{delimiter(menclothing.title,30)}</h1>
-                    <p className='text-gray-500'>{delimiter(menclothing.description,53)}</p>
-                    <div className='w-full flex justify-between mt-5'>
-                      <p className='text-gray-900 font-bold'>{menclothing.price} $</p>
-                      <Link to='/Product' state={menclothing}  className='border border-spacing-3 p-2 rounded-xl bg-gray-900 text-white ease-in duration-200'>See More</Link>
-                    </div>
-          </div>    
+            <Product key={menclothing.id} data={menclothing}/>   
           )
         })}
       </div>
