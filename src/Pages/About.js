@@ -7,7 +7,7 @@ export default function About() {
      <div className='bg-gray-900 text-white'>
         <div className='container mx-auto flex flex-col items-center py-9 sm:flex-row'>
             <div className='m-5 sm:m-0'>
-              <img className='animate-[wave_5s_ease-in-out_infinite] ' width={700} src='https://images.pexels.com/photos/1020370/pexels-photo-1020370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
+              <img className='animate-[wave_5s_ease-in-out_infinite] ' alt='img' width={700} src='https://images.pexels.com/photos/1020370/pexels-photo-1020370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
             </div>
             <div className='mt-7 mx-5 sm:mt-0'>
                 <h3 className='text-xl'>Shop is fun</h3>

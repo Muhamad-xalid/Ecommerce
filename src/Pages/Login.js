@@ -45,7 +45,7 @@ return (
       
             {/* <Link type='submit' to={`${login ? '/Home' : '/#'}`}>Login</Link> */}
             <button onClick={login ? toHome : incorrect}  className='text-center mb-3 px-2 py-1 border-4 rounded-lg bg-gray-900 text-white hover:bg-gray-800' type='submit'>Login</button>
-            <a className='underline cursor-pointer'>Register</a>
+            {/* <a className='underline cursor-pointer'>Register</a> */}
         </form>
     </div>
   )
