@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 import { delimiter } from '../Utils/Delimiter';
 export default function Product(props) {
     const [modalIsOpen, setIsOpen] = useState(false)
-    const [data,setdata] = useState()
+    const [data,setdata] = useState(props.data)
     useEffect(()=>{
       setdata(props.data)
     },[props.data])
